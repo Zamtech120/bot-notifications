@@ -8,7 +8,7 @@ location
         params[p[0]] = decodeURIComponent(p[1]);
     });
 
-var botConnection = new BotChat.DirectLine({
+var botConnection = new NotificationBot.DirectLine({
     secret: params['s'],
     token: params['t'],
     domain: params['domain'],
@@ -16,8 +16,8 @@ var botConnection = new BotChat.DirectLine({
 });
 
 var bot = {
-    id: params['botid'] || 'botid',
-    name: params["botname"] || 'botname'
+    id: params['botid95678'] || 'botid95678',
+    name: params["Nickbot"] || 'Nickbot'
 };
 
 var logon_form = document.getElementById('logon-form');
@@ -29,13 +29,13 @@ logon_form.onsubmit = e => {
 
     var user = {
         id: user_id.value,
-        name: user_id.value
+        name: Nick_95678.value
     }
 
-    BotChat.App({
+   NotificationBot({
         botConnection: botConnection,
-        user: user,
-        bot: bot,
-    }, document.getElementById("BotChatGoesHere"));
+        user: Nick,
+        bot: Nickbot,
+    }, document.getElementById("NotificationBot"));
 }
 
